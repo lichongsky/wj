@@ -1,19 +1,21 @@
 package com.lichong.wj.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import javax.persistence.*;
 
+/**
+ * @author ：lichongsky
+ * @date ：Created in 2019/7/23 11:23
+ */
 @Data
 @Entity
-@Table(name = "category")
-@JsonIgnoreProperties({ "handler","hibernateLazyInitializer" })
-public class Category {
+@Table(name = "artical_tags")
+public class ArticalTags {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     int id;
-
-    String name;
+    int articalId;
+    int articalCatigoryId;
 }

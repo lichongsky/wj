@@ -7,13 +7,19 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "category")
-@JsonIgnoreProperties({ "handler","hibernateLazyInitializer" })
-public class Category {
+@Table(name = "roles_user")
+@JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
+public class RolesUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     int id;
-
-    String name;
+    /**
+     * 角色id
+     */
+    int rid;
+    /**
+     * 用户id
+     */
+    int uid;
 }

@@ -1,5 +1,8 @@
 package com.lichong.wj.entity;
 
+import lombok.Data;
+
+@Data
 public class Result {
     //响应码
     private int code;
@@ -8,11 +11,4 @@ public class Result {
         this.code = code;
     }
 
-    public int getCode() {
-        return code;
-    }
-
-    public void setCode(int code) {
-        this.code = code;
-    }
 }
