@@ -1,7 +1,9 @@
 package com.lichong.wj.controller;
 
+import com.lichong.wj.bind.search.Search;
 import com.lichong.wj.entity.Book;
 import com.lichong.wj.entity.Category;
+import com.lichong.wj.entity.SearchBy;
 import com.lichong.wj.service.impl.BookServiceImpl;
 import com.lichong.wj.service.impl.CategoryServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +52,7 @@ public class LibraryController {
 
 
     @PostMapping("/api/search")
-    public List<Book> searchResult(@RequestBody Search s) throws Exception {
+    public List<Book> searchResult(@RequestBody SearchBy s) throws Exception {
         // 关键字为空时查询所有书籍
         if ("".equals(s.getKeywords())) {
             return bookServiceImpl.list();

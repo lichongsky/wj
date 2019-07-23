@@ -1,6 +1,5 @@
 package com.lichong.wj.entity;
 
-import com.lichong.wj.entity.base.IBaseEntity;
 import lombok.Data;
 import lombok.ToString;
 
@@ -11,7 +10,7 @@ import java.sql.Date;
 @Entity
 @Table(name = "demo_table")
 @ToString
-public class Demo implements IBaseEntity {
+public class Demo  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
