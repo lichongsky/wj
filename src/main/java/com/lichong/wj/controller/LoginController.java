@@ -2,7 +2,7 @@ package com.lichong.wj.controller;
 
 import com.lichong.wj.entity.Result;
 import com.lichong.wj.entity.User;
-import com.lichong.wj.service.UserService;
+import com.lichong.wj.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
 public class LoginController {
 
     @Autowired
-    UserService userService;
+    UserServiceImpl userService;
 
     @CrossOrigin
     @ResponseBody

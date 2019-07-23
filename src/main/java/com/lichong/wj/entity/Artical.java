@@ -29,4 +29,5 @@ public class Artical {
     Date editDate;
     int state;
     int pageView;
+    int likeNumber;
 }
